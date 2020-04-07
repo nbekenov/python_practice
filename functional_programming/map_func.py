@@ -27,3 +27,13 @@ pprint(name_and_age)
 """ Create a new iterable containnong info about name and age
     without modifying an old iterable
 """
+
+
+# List Comprehensions
+print('########################## List Comprehensions')
+pprint( [{ 'name': x.name, 'age': currentYear - x.born} for x in scientists ] )
+
+
+# get rid of List Comprehensions
+print('########################## generator expression')
+pprint( tuple( { 'name': x.name, 'age': currentYear - x.born} for x in scientists ) )
