@@ -36,4 +36,4 @@ pprint( [{ 'name': x.name, 'age': currentYear - x.born} for x in scientists ] )
 
 # get rid of List Comprehensions
 print('########################## generator expression')
-pprint( tuple( { 'name': x.name, 'age': currentYear - x.born} for x in scientists ) )
+pprint( tuple( { 'name': x.name.upper(), 'age': currentYear - x.born} for x in scientists ) )

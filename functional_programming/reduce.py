@@ -26,3 +26,24 @@ name_and_age = tuple ( map(lambda x : { 'name': x.name, 'age': currentYear - x.b
 
 total_age = reduce( lambda acc, val : acc + val['age'], name_and_age, 0 )
 print(total_age)
+
+
+def reducer(acc, val):
+    acc[val.field].append(val.name)
+    return acc
+
+sc_by_grouped_by_filed = reduce(
+    reducer,
+    scientists,
+    {'math':[], 'physics': [], 'chemistry': []}
+)
+pprint(sc_by_grouped_by_filed)
+
+print('##########################')
+sc_by_grouped_by_filed = reduce(
+    reducer,
+    scientists,
+    collections.defaultdict(list)
+)
+
+pprint(sc_by_grouped_by_filed)
