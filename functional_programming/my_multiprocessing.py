@@ -34,17 +34,30 @@ def transform(x):
     print(f'Process {os.getpid()} done processing record {x.name} ')
     return result
 
-start = time.time()
+
 
 """ This is regular execution
 """
 #transformation_result = tuple(map(transform, scientists))
 
 """ multiprocessing in action
-"""
-pool = multiprocessing.Pool()
-transformation_result=pool.map(transform, scientists)
+    multiprocessing in the standard library was designed to run your code across multiple CPUs.
+     At a high level, it does this by creating a new instance of the Python interpreter
+     to run on each CPU and then farming out part of your program to run on it.
 
-end = time.time()
-print(f'\nTime to complettion {end - start:.2f}s\n')
-pprint(transformation_result)
+     bringing up a separate Python interpreter is not as fast as starting
+     a new thread in the current Python interpreter.    
+"""
+def get_results():
+    with multiprocessing.Pool(processes=len(scientists)) as pool:
+        return pool.map(transform, scientists)
+
+def main():
+    start = time.time()
+    transformation_result=get_results()
+    end = time.time()
+    print(f'\nTime to complettion {end - start:.2f}s\n')
+    pprint(transformation_result)
+
+if __name__ == '__main__':
+    main()
