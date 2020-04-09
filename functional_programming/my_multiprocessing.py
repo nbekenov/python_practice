@@ -3,6 +3,7 @@
 # Note Avoid using `multiprocessing.py' whcih conflicts with the system module.
 import collections
 import multiprocessing
+import os
 from functools import reduce
 from pprint import pprint
 from datetime import datetime
@@ -26,11 +27,11 @@ scientists = (
 
 import time
 def transform(x):
-    print('Processing record {} ...'.format(x.name))
+    print(f'Process {os.getpid()} working on record {x.name} ...')
     time.sleep(1)
     currentYear = datetime.now().year
     result = { 'name': x.name, 'age': currentYear - x.born}
-    print('Done processing record {} '.format(x.name))
+    print(f'Process {os.getpid()} done processing record {x.name} ')
     return result
 
 start = time.time()
