@@ -42,11 +42,11 @@ def transform(x):
 
 """ multiprocessing in action
     multiprocessing in the standard library was designed to run your code across multiple CPUs.
-     At a high level, it does this by creating a new instance of the Python interpreter
-     to run on each CPU and then farming out part of your program to run on it.
+    At a high level, it does this by creating a new instance of the Python interpreter
+    to run on each CPU and then farming out part of your program to run on it.
 
-     bringing up a separate Python interpreter is not as fast as starting
-     a new thread in the current Python interpreter.    
+    bringing up a separate Python interpreter is not as fast as starting
+    a new thread in the current Python interpreter.    
 """
 def get_results():
     with multiprocessing.Pool(processes=len(scientists)) as pool:
