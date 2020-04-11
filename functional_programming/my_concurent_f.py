@@ -35,6 +35,13 @@ def transform(x):
     return result
 
 
+""" With multythreading you can get into Global Interpreter Lock (GIL).
+    Because of the GIL, no two threads can execute Python code at the same time.
+    So even if you have multiple threads running in your Python program,
+    only one of them can execute at a time.
+    The best way to get around this is to use process-based parallel programing,
+    or process-based parallelism.
+"""
 def concurent_func():
     with concurrent.futures.ThreadPoolExecutor() as executor:
         # if you want multiprocessing then concurrent.futures.ProcessPoolExecutor()
