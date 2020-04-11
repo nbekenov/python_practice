@@ -34,10 +34,12 @@ def transform(x):
     print(f'Process {os.getpid()} done processing record {x.name} ')
     return result
 
+
 def concurent_func():
-    with concurrent.futures.ProcessPoolExecutor() as executor:
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        # if you want multiprocessing then concurrent.futures.ProcessPoolExecutor()
         result = executor.map(transform, scientists)
-    return result
+    return tuple(result)
 
 def main():
     start = time.time()
