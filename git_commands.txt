@@ -15,3 +15,8 @@ git remote -v: List remote repositories
 git push -u : Push to , and set default upstream for
 git fetch [name_of_your_remote] : Update your branch when the original branch from official repository has been updated
 git pull: Fetch, and then merge
+
+git checkout -b hotfix
+git commit -a -m 'Fix broken email address'
+git checkout master
+git merge hotfix
