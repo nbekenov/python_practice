@@ -1,0 +1,17 @@
+git init: Create a new git repository
+git status: Compare working directory, staging area, and current branch
+git add: Add changes from working directory to staging area
+git commit: Commit changes from staging area to current branch
+git config: Set or get configuration
+git log: Show a history (aka "log") of project commits
+git checkout: Check out branch (update HEAD and apply changes to working directory)
+git branch -c: Create a branch
+git checkout -b [name_of_your_new_branch] : Create branch, then check it out ( creates your branch locally)
+git push origin [name_of_your_new_branch] : Push the branch on github
+git branch -a : List branches
+git merge: Merge changes from different branches
+git remote add [name_of_your_remote] [name_of_your_new_branch] : Add a new remote for your branch
+git remote -v: List remote repositories
+git push -u : Push to , and set default upstream for
+git fetch [name_of_your_remote] : Update your branch when the original branch from official repository has been updated
+git pull: Fetch, and then merge
