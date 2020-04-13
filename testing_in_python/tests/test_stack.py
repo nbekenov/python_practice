@@ -4,7 +4,7 @@ from ds.stack import Stack
 import pytest
 
 
-@pytest.fixtures
+@pytest.fixture
 def stack():
     """ PyTest fixtures
         a great way to provide a fixed baseline
