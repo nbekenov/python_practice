@@ -20,3 +20,10 @@ git checkout -b hotfix
 git commit -a -m 'Fix broken email address'
 git checkout master
 git merge hotfix
+
+
+
+###git-pull-from-master-into-the-development-branch
+git checkout dmgr2      # gets you "on branch dmgr2"
+git fetch origin        # gets you up to date with origin
+git merge origin/master
