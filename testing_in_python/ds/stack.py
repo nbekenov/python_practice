@@ -11,3 +11,10 @@ class Stack:
 
     def push(self, item):
         self._storage.append(item)
+
+    def pop(self):
+        try:
+            item = self._storage.pop()
+        except IndexError as e:
+            item = None
+        return item
