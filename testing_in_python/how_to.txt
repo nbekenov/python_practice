@@ -1,1 +1,10 @@
 run pytest : python -m pytest -v
+
+python -m pytest -v --cov=ds
+
+# filter by name
+python -m pytest -v -k test_pop
+
+
+1. https://docs.pytest.org/en/latest/fixture.html
+2. ttps://docs.pytest.org/en/latest/monkeypatch.html
