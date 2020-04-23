@@ -1,8 +1,12 @@
 import logging
+import time
+from datetime import datetime
 
+time = datetime.now()
+file_out = time.strftime("%Y-%m-%d %H:%M:%S") + ".log"
 logging.basicConfig(
     level = logging.INFO,
-    filename = 'app.log',
+    filename = file_out,
     filemode = 'w',
     format = '%(asctime)s - %(name)s - %(process)d - %(levelname)s - %(message)s'
 )
