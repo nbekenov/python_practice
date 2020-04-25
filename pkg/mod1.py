@@ -1,3 +1,9 @@
-a = [200, 300, 400]
+__all__ = ['load_data']
 
-s = 'just string example from mod1' 
+# __all__  - controls what os imported when #from pkg.mod1 import * # is specified
+
+def load_data():
+    print('loading data using mod1.load_data()')
+
+class Customer:
+    pass
