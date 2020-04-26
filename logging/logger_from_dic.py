@@ -1,3 +1,8 @@
+"""
+A simple demo of logging configuration with YAML (Python 3)
+=============================================================
+Requires PyYAML
+"""
 import logging
 import logging.config
 import yaml
