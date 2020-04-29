@@ -9,3 +9,6 @@ pylint --help-msg=missing-docstring
 
 # desacble specific check
 pylint --disable=W1203 slack_notification.py
+
+# use
+pylintrc file to  suppress errors
