@@ -1,0 +1,11 @@
+# instal
+pip install pylint
+
+# run
+pylint my_python_prog.py
+
+# get info for specific check
+pylint --help-msg=missing-docstring
+
+# desacble specific check
+pylint --disable=W1203 slack_notification.py
