@@ -14,3 +14,15 @@ def fizz_buzz(numbers):
 fizz_buzz(my_list)
 for item, value in enumerate(my_list):
     print(f' index = {item}, value = {value}')
+
+
+
+# list Comprehensions
+numbers = [4, 2, 1, 6, 9, 7]
+
+def square(x):
+    return x*x
+
+
+result = [ square(num) for num in numbers]
+print(result)
