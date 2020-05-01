@@ -26,3 +26,31 @@ def square(x):
 
 result = [ square(num) for num in numbers]
 print(result)
+
+
+def is_odd(x):
+    return bool(x % 2)
+
+print([x for x in [1, 2, -5, 4] if is_odd(x)] )
+
+
+# example create grid
+print('>>>>>>>>>>>>>>>>')
+
+
+def create_grid(num_rows, num_colums):
+    grid = [ [ 0 for _ in range(num_colums) ] for _ in range(num_rows) ]
+    return grid
+
+print(f' grid = {create_grid(3,5)}')
+
+
+# max function
+# find the max square
+lst = [1, 3, 5, -9, 4]
+
+print(f' max_square =  {max(lst, key = lambda x : x * x)}')
+
+# check wihc num is odd
+result = [(lambda x: x % 2 == 1)(num) for num in lst]
+print(f' result for odd check = {result} ')
