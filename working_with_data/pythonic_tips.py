@@ -54,3 +54,16 @@ print(f' max_square =  {max(lst, key = lambda x : x * x)}')
 # check wihc num is odd
 result = [(lambda x: x % 2 == 1)(num) for num in lst]
 print(f' result for odd check = {result} ')
+
+# formating string with f
+print(f"""Hi this is the first line
+and this is the second one
+""")
+
+
+# sorting
+animals = [{'type': 'cat', 'name': 'Stephanie', 'age': 8}, {'type': 'dog', 'name': 'Devon', 'age': 3}, {'type': 'rhino', 'name': 'Moe', 'age': 5}]
+
+print(f""" return the oldest animal
+{sorted(animals, key=lambda animal: animal['age'], reverse=True)[0]}
+""")
