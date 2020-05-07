@@ -67,3 +67,10 @@ animals = [{'type': 'cat', 'name': 'Stephanie', 'age': 8}, {'type': 'dog', 'name
 print(f""" return the oldest animal
 {sorted(animals, key=lambda animal: animal['age'], reverse=True)[0]}
 """)
+
+
+
+
+import string
+white_space_set = set(string.whitespace)
+print(''.join(letter for letter in 'HELLO WORLD' if letter not in white_space_set))
