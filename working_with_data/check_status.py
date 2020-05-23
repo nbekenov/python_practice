@@ -38,6 +38,7 @@ def create_status_file():
     return out_file_name
 
 
+
 def viya_healthcheck():
     """
     Parse status file and check if any service is down
